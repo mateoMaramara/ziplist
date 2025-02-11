@@ -1,11 +1,11 @@
 "use strict";
-// function ziplist(list: unknown[], list2: unknown[]): unknown[] {
-//     let result = [];
-//     for(let i = 0; i < list.length; i++){
-//         result.push(list[i], list2[i]);
-//     }
-//     return result;
-// }
+function ziplist(list, list2) {
+    let result = [];
+    for (let i = 0; i < list.length; i++) {
+        result.push(list[i], list2[i]);
+    }
+    return result;
+}
 function zipListTheFunctionalWay(list, list2) {
     const result = [];
     list.forEach((element, index) => {
@@ -13,5 +13,5 @@ function zipListTheFunctionalWay(list, list2) {
     });
     return result;
 }
-//console.log(ziplist([1, 2, 3], ['a', 'b', 'c']));
-console.log(zipListTheFunctionalWay([1, 2, 3], ['a', 'b', 'c']));
+console.log(ziplist(['a', 'b', 'c'], [1, 2, 3]));
+console.log(zipListTheFunctionalWay(['a', 'b', 'c'], [1, 2, 3]));
